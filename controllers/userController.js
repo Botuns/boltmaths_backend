@@ -7,7 +7,7 @@ exports.login = async (req, res) => {
   const { username, password } = req.body;
   try {
     const user = await userService.login(username, password);
-    res.json({ user });
+    res.status(200).json({ user });
   } catch (error) {
     res.status(401).json({ message: 'Authentication failed' });
   }
