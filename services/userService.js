@@ -88,7 +88,7 @@ exports.saveScore = async (userId, score) => {
 exports.getTopFiveUsers = async () => {
   try {
     const topUsers = await User.find({})
-      .sort({ score: -1 }) // Sort by score in descending order
+      .sort({ totalScore: -1 }) // Sort by score in descending order
       .limit(5); // Limit to the top 5 users
 
     return topUsers;
