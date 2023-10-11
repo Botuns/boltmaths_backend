@@ -16,6 +16,7 @@ exports.login = async (req, res) => {
 // Signup
 exports.signup = async (req, res) => {
   const { username, email, password, class: userClass } = req.body;
+  console.log(req.body)
   try {
     const user = await userService.signup(username, email, password, userClass);
     res.status(201).json(user);
