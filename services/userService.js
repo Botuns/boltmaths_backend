@@ -48,6 +48,7 @@ exports.signup = async (username, email, password, userClass) => {
     await sendWelcomeEmail(email,username)
     return user;
   } catch (error) {
+    console.log(error.message)
     throw new Error('Signup failed: ' + error.message);
   }
 };
