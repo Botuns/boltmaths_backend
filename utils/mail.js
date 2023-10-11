@@ -96,7 +96,7 @@ exports.sendWelcomeEmail = async (email,username) => {
             </ul>
             <p>Are you ready to become a math champion? Click the button below to start your adventure!</p>
             <div class="cta-button">
-                <a class="cta-link" href="#">Get Started</a>
+                <a class="cta-link" href="https://boltmaths.netlify.app">Get Started</a>
             </div>
         </div>
         <div class="footer">
