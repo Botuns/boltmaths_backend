@@ -60,20 +60,20 @@ exports.saveScore = async (userId, score) => {
       throw new Error('User not found');
     }
 
-    user.score += score;
+    user.totalScore += score;
 
     if (user.highestScore < score) {
       user.highestScore = score;
     }
 
     // Check and update starsAchieved
-    if (user.score >= 500) {
+    if (user.totalScore >= 500) {
       user.starsAchieved = 1;
     }
-    if (user.score >= 700) {
+    if (user.totalScore >= 700) {
       user.starsAchieved = 2;
     }
-    if (user.score >= 1000) {
+    if (user.totalScore >= 1000) {
       user.starsAchieved = 3;
     }
 
